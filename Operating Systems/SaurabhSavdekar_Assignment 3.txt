@@ -1,0 +1,125 @@
+
+	------------------------------------------------
+	Name : Saurabh Savdekar
+	PRN : 210540181180
+	Assignment 3
+	------------------------------------------------
+
+	Q.1 List all the linux users with their USername,UID and Shell Name
+	
+	[root@localhost ~]# cat /etc/passwd | cut -d':' -f1,3,7
+
+	root:x:/bin/bash
+        bin:x:/sbin/nologin
+        daemon:x:/sbin/nologin
+        adm:x:/sbin/nologin
+        lp:x:/sbin/nologin
+        sync:x:/bin/sync
+        shutdown:x:/sbin/shutdown
+        halt:x:/sbin/halt
+        mail:x:/sbin/nologin
+        operator:x:/sbin/nologin
+        games:x:/sbin/nologin
+        ftp:x:/sbin/nologin
+        nobody:x:/sbin/nologin
+        systemd-network:x:/sbin/nologin
+        dbus:x:/sbin/nologin
+        polkitd:x:/sbin/nologin
+        libstoragemgmt:x:/sbin/nologin
+        colord:x:/sbin/nologin
+        rpc:x:/sbin/nologin
+        saned:x:/sbin/nologin
+        gluster:x:/sbin/nologin
+        saslauth:x:/sbin/nologin
+        abrt:x:/sbin/nologin
+        setroubleshoot:x:/sbin/nologin
+        rtkit:x:/sbin/nologin
+        pulse:x:/sbin/nologin
+        radvd:x:/sbin/nologin
+        chrony:x:/sbin/nologin
+        unbound:x:/sbin/nologin
+        qemu:x:/sbin/nologin
+        tss:x:/sbin/nologin
+        sssd:x:/sbin/nologin
+        usbmuxd:x:/sbin/nologin
+        geoclue:x:/sbin/nologin
+        ntp:x:/sbin/nologin
+        gdm:x:/sbin/nologin
+        rpcuser:x:/sbin/nologin
+        nfsnobody:x:/sbin/nologin
+        gnome-initial-setup:x:/sbin/nologin
+        sshd:x:/sbin/nologin
+        avahi:x:/sbin/nologin
+        postfix:x:/sbin/nologin
+        tcpdump:x:/sbin/nologin
+        saurabh:x:/bin/bash
+        john:x:/bin/bash
+        testuser:x:/sbin/nologin
+        tom:x:/sbin/nologin
+        TonyStark:x:/sbin/nologin
+
+
+
+-------------------------------------------------------------------------------------------------
+	
+	Q.2 Write a script where a user enters a file path and output says if input path is a file or a directory
+
+	[root@localhost ~]# vi script.sh 
+	[root@localhost ~]# cat script.sh 
+
+	#!/bin/bash
+
+	read -p "Enter path : " path
+	if [[ -f $path ]]
+	then 
+		echo "It's a File !"
+	elif [[ -d $path ]] 
+	then
+		echo "It's a Directory !"
+	else
+		echo "It's neither a directory nor a file !"
+	fi
+
+	[root@localhost ~]# bash script.sh 
+	Enter path : /etc/passwd
+	It's a File !
+
+	[root@localhost ~]# bash script.sh 
+	Enter path : /etc/cdac
+	It's a Directory !
+
+	[root@localhost ~]# bash script.sh 
+	Enter path : hjgfhd
+	It's neither a directory nor a file !
+
+-------------------------------------------------------------------------------------------------
+
+	Q.3 Write a script where a username is entered and its userid is displayed in the output
+
+	[root@localhost ~]# vi script.sh
+	[root@localhost ~]# cat script.sh
+
+	#!/bin/bash
+	
+	read -p "Enter username : " uname
+	uid=$(cat /etc/passwd | grep $uname | cut -d':' -f3)
+	if [ $uid ]
+		then
+		echo " User ID of $uname is : $uid "
+	else
+		echo "User $uname doesn't exist !"
+	fi
+
+	[root@localhost ~]# bash script.sh 
+	Enter username : saurabh
+ 	User ID of vinay is : 1000
+	
+	[root@localhost ~]# bash script.sh
+	Enter username : hello
+	User hello doesn't exist !
+	
+	--Verification :-
+
+	[root@localhost ~]# cat /etc/passwd |grep saurabh
+	saurabh:x:1000:1000:CentOs:/home/saurabh:/bin/bash
+

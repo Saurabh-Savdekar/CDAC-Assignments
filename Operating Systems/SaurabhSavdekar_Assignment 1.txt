@@ -1,0 +1,52 @@
+
+	------------------------------------------------
+	Name : Saurabh Savdekar
+	PRN : 210540181180
+	Assignment 1
+	------------------------------------------------
+
+
+Q. Continue the script to copy file1 to dir1 and so on... till file10 to dir10.
+
+   #!/bin/bash
+
+   # Script to create 10 directories named as dir1-dir10 and 10 files named as file1-file10
+
+    mkdir dir{1..10}
+    touch file{1..10}
+
+
+Answer Q1:
+
+[root@localhost script1]# vi assign1
+[root@localhost script1]# chmod +x assign1
+[root@localhost script1]# ./assign1
+[root@localhost script1]# ls
+assign1  dir1  dir10  dir2  dir3  dir4  dir5  dir6  dir7  dir8  dir9  file1  file10  file2  file3  file4  file5  file6  file7  file8  file9
+[root@localhost script1]# ls dir1
+file1
+[root@localhost script1]# ls dir2
+file2
+[root@localhost script1]# ls dir10
+file10
+[root@localhost script1]# 
+
+------------------------------------
+Script assign1
+------------------------------------
+
+!/bin/bash
+
+mkdir dir{1..10}
+touch file{1..10}
+
+
+for i in {1..10}
+do
+        cp /root/script1/file$i /root/script1/dir$i
+done
+
+
+
+
+

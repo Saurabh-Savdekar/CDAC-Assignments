@@ -1,0 +1,174 @@
+Name – Saurabh Savdekar
+PRN -- 210540181180
+Assignment 2 
+------------------
+Hierarchy in Linux (File Structure)
+-------------------------------------------
+1. bin -- The '/bin' directory contains user binaries, executable files, Linux commands that 
+are used in single user mode, and common commands that are used by all the users, like 
+cat, cp, cd, ls, etc.
+2. sbin -- The '/sbin' directory also contains executable files, but unlike '/bin' it only 
+contains system binaries which require root privilege to perform certain tasks and are 
+helpful for system maintenance purpose. e.g. fsck, root, init, ifconfig, etc.
+3. lib -- The '/lib' directory contains shared libraries which are often used by the '/bin' and '/
+sbin' directories. It also contains kernel module. These filenames are identable as ld* or 
+lib*.so.*. For example, ld-linux.so.2 and libfuse.so.2.8.6
+4. opt -- The term 'opt' is short for optional. Its main purpose is to store optional 
+application software packages. Add-on applications from individual vendors should be 
+installed in '/opt'. And so in some systems '/opt' is empty as they may not have any add-on
+application.
+5. boot -- The '/boot' directory contains boot loader files which are essential to boot the 
+system. In other words, they only contain files which are needed for a basic Linux system 
+to get up and going.
+6. etc -- All the machine related configurtion files are kept in '/etc'. Almost everything 
+related to the configuration of your system is placed here. It also contain startup and 
+shutdown shell script which is used to start and stop a program.
+7. home -- The '/home' directory stores users personnel files. After the '/home' there is a 
+directory which is generally named at the user's name like we have '/home/sssit'. Inside 
+this directory we have our sub-directories like Desktop, Downloads, Documents, pictures, 
+etc.
+8. root -- The '/root' directory is the home directory of the root user.
+9. srv -- The '/root' directory is the home directory of the root user.
+10. media -- The '/media' directory acts as a mount point for removable media devices such 
+as CD-Rom, floppy, USB devices, etc.
+11. mnt -- The term 'mnt' stands for mount. The '/mnt' directory should be empty and 
+sysadmins can only mount temporary filesystems.
+12. tmp -- The term 'tmp' stands for temporary. Data stored in '/tmp' is temporary and 
+may use either disk space or RAM. When system is rebooted, files under this directory is 
+automatically deleted. So it is advisable that never use '/tmp' to store important data.
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+Q2: How to change umask temporary and permanently ?
+
+For temporary : change directly umask to 002
+[saurabh@localhost ~]$ umask
+0002
+[saurabh@localhost ~]$ umask 044
+[saurabh@localhost ~]$ umask
+0044
+[saurabh@localhost ~]$ 
+
+For Permanent : change the umask to 0022 in bash_profile file
+[saurabh@localhost ~]$ umask
+0002
+[saurabh@localhost ~]$ id
+uid=1000(saurabh) gid=1000(saurabh) groups=1000(saurabh) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+[saurabh@localhost ~]$ vi ~/.bash_profile
+[saurabh@localhost ~]$ umask
+0022
+----------------------------------------------------------------------------------------------------------------------------------
+
+Q3: Create a user 
+Login as user1 and create two directories dir1 and dir2 
+create 100 files to both directories
+copy all files from dir1 to dir2
+move all files from dir2 to dir1
+results – your dir2 will be empty now
+What is the permission of the directory right now?
+- add 2 files in the directory - what is the permission of these two files? Is it same as that of
+dir2
+- Run the command chmod -R 777 dir2
+- Create two new files named 'testfile1' & 'testfile2' and observe the permission of these 
+two files? Is it same as that of dir2
+
+1) create a user
+[root@localhost ~]# useradd john
+[root@localhost ~]# passwd john
+Changing password for user john.
+New password: 
+BAD PASSWORD: The password contains the user name in some form
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+[root@localhost ~]# 
+
+2) login as john
+[root@localhost ~]# su - john
+[john@localhost ~]$ 
+
+3)create two directories dir1 and dir2
+[john@localhost ~]$ mkdir dir1 dir2
+[john@localhost ~]$ ls
+dir1  dir2
+
+4)create 100 files to both directories
+copy all files from dir1 to dir2
+move all files from dir2 to dir1
+
+[john@localhost dir1]$ cd /home/john/dir1/
+[john@localhost dir1]$ touch file{1..100}
+[john@localhost dir1]$ ls
+file1    file18  file27  file36  file45  file54  file63  file72  file81  file90
+file10   file19  file28  file37  file46  file55  file64  file73  file82  file91
+file100  file2   file29  file38  file47  file56  file65  file74  file83  file92
+file11   file20  file3   file39  file48  file57  file66  file75  file84  file93
+file12   file21  file30  file4   file49  file58  file67  file76  file85  file94
+file13   file22  file31  file40  file5   file59  file68  file77  file86  file95
+file14   file23  file32  file41  file50  file6   file69  file78  file87  file96
+file15   file24  file33  file42  file51  file60  file7   file79  file88  file97
+file16   file25  file34  file43  file52  file61  file70  file8   file89  file98
+file17   file26  file35  file44  file53  file62  file71  file80  file9   file99
+[john@localhost dir1]$ cd /home/john/dir2
+[john@localhost dir2]$ touch file{101..200}
+[john@localhost dir2]$ ls
+file101  file113  file125  file137  file149  file161  file173  file185  file197
+file102  file114  file126  file138  file150  file162  file174  file186  file198
+file103  file115  file127  file139  file151  file163  file175  file187  file199
+file104  file116  file128  file140  file152  file164  file176  file188  file200
+file105  file117  file129  file141  file153  file165  file177  file189
+file106  file118  file130  file142  file154  file166  file178  file190
+file107  file119  file131  file143  file155  file167  file179  file191
+file108  file120  file132  file144  file156  file168  file180  file192
+file109  file121  file133  file145  file157  file169  file181  file193
+file110  file122  file134  file146  file158  file170  file182  file194
+file111  file123  file135  file147  file159  file171  file183  file195
+file112  file124  file136  file148  file160  file172  file184  file196
+[john@localhost dir2]$ 
+
+[john@localhost dir2]$ cd ..
+[john@localhost ~]$ cp -r dir1/file{1..100} dir2
+[john@localhost ~]$ mv dir2/* dir1
+[john@localhost ~]$ cd dir2
+[john@localhost dir2]$ ls
+[john@localhost dir2]$ 
+
+Dir2 is empty now
+
+5) What is the permission of the directory right now?
+[john@localhost ~]$ ls -l
+total 12
+drwxrwxr-x. 2 john john 8192 May  7 19:53 dir1
+drwxrwxr-x. 2 john john    6 May  7 19:53 dir2
+[john@localhost ~]$ 
+
+6)add 2 files in the directory - what is the permission of these two files? Is it same as that
+of dir2
+[john@localhost ~]$ cd dir1
+[john@localhost dir1]$ touch notes1 notes2
+[john@localhost dir1]$ ls -l
+-rw-rw-r--. 1 john john 0 May  7 19:56 notes1
+-rw-rw-r--. 1 john john 0 May  7 19:56 notes2
+No , Permission is not same as dir2
+
+7) Run the command chmod -R 777 dir2
+[john@localhost ~]$ chmod -R 777 dir2
+[john@localhost ~]$ ls -l
+total 12
+drwxrwxr-x. 2 john john 8192 May  7 19:56 dir1
+drwxrwxrwx. 2 john john    6 May  7 19:53 dir2
+[john@localhost ~]$ 
+
+8)Create two new files named 'testfile1' & 'testfile2' and observe the permission of these
+two files? Is it same as that of dir2
+
+[john@localhost ~]$ touch testfile1 testfile2
+[john@localhost ~]$ ls -l
+total 12
+drwxrwxr-x. 2 john john 8192 May  7 19:56 dir1
+drwxrwxrwx. 2 john john    6 May  7 19:53 dir2
+-rw-rw-r--. 1 john john    0 May  7 19:59 testfile1
+-rw-rw-r--. 1 john john    0 May  7 19:59 testfile2
+No it is not same as dir2
+
+
+
