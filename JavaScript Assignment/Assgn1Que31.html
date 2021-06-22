@@ -1,0 +1,134 @@
+<body> <html>
+  <head>
+  <script>
+         function PersonDetails() {
+
+               Name = document.getElementById("name").value;
+               dob = document.getElementById("dob").value;
+               email1 = document.getElementById("email").value;
+               number1 = parseInt(document.getElementById("number").value); 							
+                     
+       /*         if(myForm.name.value.length==0){
+                      alert("this is invalid name");
+	               }
+	
+		        var alphaExp = /^[a-zA-Z]+$/;
+                  if(myForm.name.value.match(alphaExp)){
+                      return true;
+                    }else{
+                      alert("Please Enter Name with Alphabets");
+                       myForm.name.focus()
+					   myForm.name.select();
+					  return false;
+                    } 
+                var emailExp = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+                    if(myForm.email.value.match(emailExp)){
+                      return true;
+                    }else{
+                      alert("Please Enter Valid Email ID");
+                      myForm.email.focus()
+					  myForm.email.select();
+                      return false;
+                    }
+				
+				var numExp = /^[0-100]+$/;
+                   	  if(myForm.number.value.match(numExp)){
+                      return true;
+                    }else{
+                      alert("Please Enter Number between 0 to 100");
+                      myForm.number.focus()
+					  myForm.number.select();
+                      return false;
+                    }
+*/					
+          var object = {
+		         name = name,
+				 dob = dob ,
+				 email : email,
+				 lucky_number : number1,
+				 Gender : function(){
+				         var ele = document.getElementsByName("gender");
+              
+                      for(var i = 0; i < ele.length; i++) {
+                           if(ele[i].checked)
+                             document.getElementById("result").innerHTML = "Gender: " +ele[i].value;
+						   }
+					}
+				 Favourite_Food : function(){
+				       var checklist = document.getElementsByClassName("c1");
+					    
+					  for(var i = 0; i<checklist.length; i++){
+						 if(checklist[i].checked == true)
+                             document.getElementById("outputfood").innerHTML = "Favourite Food : " +checklist[i].value;
+                           }
+					   }
+				} 
+
+
+
+
+                myWindow = window.open("," , "width=50 , height=50");
+				   myWindow.document.write("Name : "  ${object.name} + "<br>"+
+				   "Birth Date : "  ${object.name} + "<br>"+
+				  "Email Address : "  ${object.name} + "<br>"+
+				   "Lucky Number :" ${object.name} + "<br>"+
+				   "Gender :" ${object.Gender} + "<br>"+
+				   "Favourite Food :" ${object.Favourite_Food} + "<br>")
+				  			   
+	/*
+					var ele = document.getElementsByName("gender");
+              
+                      for(var i = 0; i < ele.length; i++) {
+                           if(ele[i].checked)
+                             document.getElementById("result").innerHTML = "Gender: " +ele[i].value;
+						   }
+					var checklist = document.getElementsByClassName("c1");
+					    
+					  for(var i = 0; i<checklist.length; i++){
+						 if(checklist[i].checked == true)
+                             document.getElementById("outputfood").innerHTML = "Favourite Food : " +checklist[i].value;
+                           }
+	            */
+	}
+
+  </script>
+</head>
+          <form name="myForm">
+                    <div>
+                      
+                        <P>
+						   <strong>Name</strong>
+						     <input type="Text" id="name" name="name" required></p>
+							 
+							 <strong>Birth Date :</strong>
+						     <input type="Date" id="dob" name="dob"  required ></P>
+							 
+							 <strong>Email Address:</strong>
+						     <input type="email" id="email" name="email" required></P>
+							 
+							 <strong>Gender:</strong>
+						     <input type="radio" id="1" name="gender" value="Male" required>Male</P>
+							 <input type="radio" id="2" name="gender" value="Female">Female</P>
+							 
+							 <strong>Lucky Number:</strong>
+						     <input type="number" id="number" name="number" required></P>
+							 
+							 <strong>Favourite Food :</strong>
+						     <input type="checkbox" class="c1" id="Pizza" name="Pizza" value="Pizza" required>Pizza</P>
+							 <input type="checkbox" class="c1" id="Pasta" name="Pasta" value="Pasta">Pasta</P>
+							 <input type="checkbox" class="c1" id="Chinese" name="Chinese" value="Chinese">Chinese</P>
+						
+						
+                       
+					   <input type="button" value="Send Data" id="" onclick="PersonDetails();"/></P>
+			     </div>
+     
+           </form>
+		   
+		  <p id="outputName"> </p>
+         <p id="outputdob"> </p>
+         <p id="outputemail"> </p>
+		 <p id="result"> </p>
+         <p id="outputlucky"> </p>
+         <p id="outputfood"> </p>
+		 

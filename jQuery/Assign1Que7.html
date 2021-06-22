@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#myselect").change(function(){
+                alert($("#myselect option:selected").val())
+            });
+        });
+    </script>
+    </head>
+    <body>
+       <select id="myselect">
+          <option value="1">Option-1</option>
+          <option value="2">Option-2</option>
+          <option value="3">Option-3</option>
+
+       </select>
+
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<html>
+<head>
+  <script>
+     function Rectangle(length,width,){
+	     
+		 this.length = length;
+		 this.width = width;
+		 this.area = area;
+		 this.perimeter = perimeter;
+		 }
+		 
+		 
+		 
+		function area(){
+		
+		 var a = length*width; 
+		 document.write("The area of rectangle is "+a+"<br>")
+		
+		}
+		 
+		 
+		 function perimeter(){
+		  
+		     var p = 2*(length+width);
+			  document.write("The perimeter of rectangle is "+p+"<br>")
+		 
+		 
+		 }
+		 
+		  function Circle(radius){
+	     
+		      this.radius = radius;
+			  this.area = area1;
+		      this.perimeter = perimeter1;
+		
+		    }
+		 
+		function area1(){
+		
+		 var c = 3.14 * radius * radius; 
+		 document.write("The area of circle is "+c+"<br>")
+		
+		}
+		 
+		 
+		 function perimeter1(){
+		  
+		     var d = 2*3.14*radius;
+			  document.write("The perimeter circle is "+d+"<br>")
+		 
+		 
+		 }
+
+
+  </script>
+</head>
+<body>
+  <script>
+       var length = parseInt(prompt("Enter the length of rectangle"));
+	   var width = parseInt(prompt("Enter the width of rectangle"));
+	    var radius = parseInt(prompt("Enter the radius of circle"));
+	   
+	   Rectangle1 = new Rectangle(length,width);
+	   Circle1 = new Circle(radius);
+	  
+	  Rectangle1.area();
+	 
+	  Rectangle1.perimeter();
+	  
+	   Circle1.area();
+	 
+	   Circle1.perimeter()
+	  
+  
+  
+  
+  
+  
+  
+  
+  </script>
+  </body>
+  </html>

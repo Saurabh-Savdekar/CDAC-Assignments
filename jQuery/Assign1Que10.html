@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("#btn").click(function(){
+              $("ul li").each(function(i){
+          $("ul li:nth-child("+(i+1)+")").prepend("<span>" +i+ ":</span>")
+          });
+        });  
+  });
+
+    </script>
+    </head>
+    <body>
+        <ul>
+            <li>Apple</li>
+            <li>Kiwi</li>
+            <li>Strawbery</li>
+        </ul>
+        <input type="button" id="btn" value="Change"/>
+
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+</head>
+<body>
+
+<script>
+         function Employee(id1,name1,salary1){
+		  this.id = id1;
+		  this.name = name1;
+		  this.salary = salary1;
+		  this.display = displayDetails;
+		  }
+		   function displayDetails(){
+		  
+		        document.write("Employee id " +this.id+"<br>"),
+		        document.write("Employee Name " +this.name+"<br>"),
+		        document.write("Employee Salary " +this.salary+"<br>")
+		    
+		  }
+		  
+		  
+    
+    </script>
+</head>
+<body>
+ <script>
+	     var emp1 = new Employee(10,"STARK",50000);
+		 var emp2 = new Employee(20,"BRUISE",40000);
+		 var emp3 = new Employee(30,"STEVE",30000);
+		 var emp4 = new Employee(40,"CLINT",20000);
+		 
+		
+		 
+		 var arr1 = [emp1.display(),
+		             emp2.display(),
+					 emp3.display(),
+					 emp4.display()]
+	   
+         
+
+ </script>
+    
+</body>
+</html>

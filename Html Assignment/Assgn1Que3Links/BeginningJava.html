@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Beginning Java</Title>
+</head>
+<body>
+
+<h2>Beginning Java</h2>
+
+<br><h3>Author</h3>
+<b><i>IVAR HORTON</i></b></br>
+
+<br>
+<p>In this chapter you have learned how to draw on components and how you can use mouse listeners to implement a drawing interface. The important points I have covered in this chapter are: </p>
+
+<li>A Graphics2D component represents the drawing surface of the component.</li>
+
+<li>You draw on a component by calling methods for its Graphics2D object.</li>
+
+<li>The user coordinate system for drawing on a component has the origin in the top-left corner of the component by default, with the positive x-axis from left to right, and the positive y-axis from top to bottom. This is automatically mapped to the device coordinate system, which is in the same orientation.</li>
+
+<li>You normally draw on a component by implementing its paint() method. The paint() method is passed a Graphics2D object that is the graphics context for the component but as type Graphics. You must cast the Graphics object to type Graphics2D to be able to access the Graphics2D class methods. The paint() method is called whenever the component needs to be redrawn.</li>
+
+<li>You can't create a Graphics2D object. If you want to draw on a component outside of the paint() method, you can obtain a Graphics2D object for the component by calling its getGraphics() method.</li>
+
+<li>There is more than one drawing mode that you can use. The default mode is paint mode, where drawing overwrites the background pixels with pixels of the current color. Another mode is XOR mode, where the current color is combined with the background color. This is typically used to alternate between ...</li>
+
+
+
+
+</body>
+</html>

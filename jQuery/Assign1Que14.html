@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+        <script>
+          $(document).ready(function(){
+             $('#btn1').click(function(){
+                var obj = {
+                    "Name":$('#name').val(),
+                    "Age":$('#Age').val(),
+                }
+                
+                var arr = [] ;
+             
+                 var b = obj.Name;
+                 var c = obj.Age
+                 arr.push(b)
+                 arr.push(c);
+       
+              $('#display').html("Object is added to array")
+                
+            
+
+             $('#btn2').click(function(){
+                arr.forEach((ele,i)=>{
+                  $("#display").html(" " +ele+ " ")})
+               });
+           });
+        });  
+        </script>
+    </head>
+    <body>
+<form>
+  <strong>Enter The Name</strong>
+  <input type="text" id="name" name="name"/><br><br>
+  
+  <strong>Enter The Age</strong>
+  <input type="number" id="Age" name="Age"/><br><br>
+
+  <strong>Are you Employed</strong>
+  <input type="radio" id="1" name="status" value="Yes">Yes</input>
+  <input type="radio" id="2" name="status" value="No">No</input><br><br>
+
+  <button id="btn1">Add</button>
+  <button id="btn2">Display</button><br><br>
+ 
+
+</form>
+<span id="display"></span>
+
+    </body>
+</html>

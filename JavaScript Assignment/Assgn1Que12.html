@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+</head>
+   
+    <body>
+          <form>
+                    <div>
+                        <h2>Compound Interest Calculator</h2>
+                        <P style="color:blue;">
+						   <strong>Enter your Principal Amount :</strong>
+						     <input type="text" id="prncipal" name="prncipal"  placeholder="Principal" ></P>
+                        <P style="color:blue;">
+						  <strong>Enter the interest Rate :</strong>
+						    <input type="text" id="interest" name="interest"  placeholder="Interest Rate" ></P>
+                        <P style="color:blue;">
+						  <strong>Enter the Interest paid in " n" amount of  year :</strong> 
+						    <input type="text" id="year" name="year"  placeholder="year" ></P>
+                        <P style="color:blue;">
+						  <strong>Number of Times interest paid per year? :</strong>
+						    <input type="text" id="timing" name="timing"  placeholder="number of time paid" ></P>
+                        <P>
+                        <input type="button" value="Calculate" id="" onclick="compoundInterest(this.principal , this.interest , this.nyear , this.ntime);"/></P>
+               </div>
+     
+                </form>
+         
+      
+         <p id="outputPrincipal"> </p>
+         <p id="outputInterest"> </p>
+         <p id="outputYear"> </p>
+         <p id="outputtime"> </p>
+         <p id="compounded"> </p>
+         
+         <script>
+                   function compoundInterest(principal, interest ,nyear,ntime ) {
+                 
+                            principal = parseInt(document.getElementById("prncipal").value);
+                            interest = parseInt(document.getElementById("interest").value);
+                            nyear = parseInt(document.getElementById("year").value);
+                            ntime = parseInt(document.getElementById("timing").value);               
+                             
+ 
+                          var resultCompound  = ( principal* Math.pow((1 + (interest/(ntime*100))), (ntime*nyear)));
+                
+                            document.getElementById("outputPrincipal").innerHTML = "Principal Enter is " + principal;
+                            document.getElementById("outputInterest").innerHTML = "Interest Enter is " + interest;
+                            document.getElementById("outputInterest").innerHTML = "Number of Years Enter " + nyear;
+                            document.getElementById("outputtime").innerHTML = "Number of time interestpaid per year " + ntime;
+                            document.getElementById("compounded").innerHTML = "Interest Plus Principal " + resultCompound;
+                   }
+                 
+           </script>
+          
+    </body>
+    
+  
+</html>

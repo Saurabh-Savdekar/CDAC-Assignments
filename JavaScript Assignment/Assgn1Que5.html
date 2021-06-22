@@ -1,0 +1,19 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+  var a = parseInt(prompt("Enter a Five Digit Number "))
+  var sum = 0
+  var c = 0
+  while(a>0){
+     c = a%10;
+	 sum+=c;
+	 var a = parseInt(a/10);
+  }
+document.write("The Sum of Digit of Number is "+"<br>")
+document.write(sum)
+
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+EmpId : 1001
+EmpName : "Nick"
+Department : Shield HQ
+Designation: Head
+Salary : 25000

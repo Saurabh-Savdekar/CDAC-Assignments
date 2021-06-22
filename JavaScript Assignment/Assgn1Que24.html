@@ -1,0 +1,43 @@
+<html>
+<head>
+    <script>
+	      function Multiplication(num1,num2,num3){
+		        number1 = parseInt(document.getElementById("num1").value);
+				number2 = parseInt(document.getElementById("num2").value);
+				number3 = parseInt(document.getElementById("num3").value);
+				 
+			
+				for(var i=1; i<=10; i++){
+			      var Table = document.getElementById('outputTable');
+			          Table.innerHTML += +i+ " " + "times" + " " +number3+" " + "=" +(number3*i) + "<br/>" 
+		        }
+				
+		  }
+	
+	
+	</script>
+</head>
+   
+    <body>
+          <form>
+                    <div>
+                      
+                        <P style="color:blue;">
+						   <strong>Start number :</strong>
+						     <input type="text" id="num1" name="num1"  placeholder="Enter the start number" ></P>
+						
+						<P style="color:blue;">
+						   <strong>End number :</strong>
+						     <input type="text" id="num2" name="num2"  placeholder="Enter the End number" ></P>
+						
+						<P style="color:blue;">	 
+						   <strong>Mutiply By :</strong>
+						     <input type="text" id="num3" name="num3"  placeholder="Multiplication factor" ></P>
+                       
+					   <input type="button" value="Times table" id="" onclick="Multiplication(num1,num2,num3);"/></P>
+			     </div>
+     
+           </form>
+		   
+         <p id="outputTable"> </p>
+       

@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script>
+	      function Display1(){
+		       var arr = ["STARK","BRUICE","STEVE","NATASHA","CLINT"]
+            
+		   var str =""
+		   for(var i=0; i<arr.length; i++){
+		     str+=("<ol>"+"<li type=disc>"+arr[i]+"</li>"+"</ol>");
+			 }
+			  document.getElementById("outputArea").innerHTML = str;
+		
+	
+		  }
+	
+	
+	</script>
+</head>
+
+<body>
+          <form>
+                    <div>
+                      
+                        <P style="color:blue;">
+						   <strong>Members in my Group are</strong><br>
+						   <input type="button" value="display" onclick="Display1()";"/></P>
+						      <p id="outputArea"> </p>
+			     </div>
+     
+           </form>

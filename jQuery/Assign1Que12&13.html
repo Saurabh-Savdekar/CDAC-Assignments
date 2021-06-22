@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+    <script>
+        var arr=["John","Steve","Ben","Damon","Ian"]
+        $(document).ready(function(){
+          $("#btn").click(function(){
+              arr.forEach((ele,i)=>{
+                  $("#list").append("<li>" +ele+ "</li>")
+                  $("#list1").append("<li>" +ele+ "</li>")
+                })
+           })
+        })
+    </script>
+    </head>
+    <body>
+        <h3>Members of Group</h3>
+        <ol id="list"></ol>
+        <h3>Members of Group</h3>
+        <ul id="list1"></ul>
+        <input type="button" id="btn" value="Change"/>
+    </body>
+</html>

@@ -1,0 +1,211 @@
+<html>
+<head>
+</head>
+<body>
+Q 6.a
+<form>
+<fieldset>
+<legend>Create a Profile</legend>
+First name :<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="first name"><br><br>
+Last Name :<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<input type="text" name="last name"><br><br>
+Date of Birth :<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="date" name="dob"><br><br>
+Gender :<br>
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="radio" name="Male">Male
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <input type="radio" name="female">Female<br><br>
+<input type="submit" name="submit" value="Create a Profile">
+</fieldset>
+</form>
+<br>
+
+<br>
+Q 6.b
+<form>
+<table border="1" cellspacing="0" width="400">
+    <tr><th>Name</th>
+	    <th>Value</th>
+	</tr>
+    <tr><td>Name</td>
+        <td><input type="text" name="name"></td>
+    </tr>		
+   <tr><td rowspan="3">Sex</td>
+        <tr><td><input type="radio" name="Male">Male</td></tr>
+        <tr><td><input type="radio" name="Male">Female</td></tr>
+    </tr>
+	<tr><td>Eye Colour</td>
+	    <td><select multiple size="1" Name="colour">
+		    <option value="blue">Blue</option>
+			<option value="black">Black</option>
+			<option value="brown">Brown</option>
+			<option value="green">Green</option>
+			<option value="yellow">Yellow</option>
+           </select></td>
+	</tr>   
+	<tr><td rowspan="3">Check all That apply</td>
+	    <tr><td><input type="checkbox" name="box1" value="0" checked/>Over 6 feet tall</td></tr>
+        <tr><td><input type="checkbox" name="box2" value="1"/> Over 200 pounds</td></tr>
+	</tr>	
+	<tr><td colspan="2">Describe your atheletic ability:</td>
+	    <tr><td colspan="2"><textarea name="name" rows="10" cols="60"></textarea></tr>
+    </tr>
+	<tr><td colspan="2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit" name="button" value="Enter my Information"></td></tr>
+</table>
+</form>
+<br>
+
+<br>
+Q 6.3
+
+<form>
+<table border="1" cellspacing="0" cellpadding="1" bgcolor="Fuchsia">
+   <tr><td>Name</td>
+       <td><input type="text" name="name"></td>
+	</tr>
+	
+   <tr><td>Employee Code</td>
+       <td><input type="number" name="code"></td>
+    </tr>	
+	
+   <tr><td rowspan="5">Department</td>
+       <tr><td><input type="radio" name="1">ADMIN</td></tr>
+	   <tr><td><input type="radio" name="1">HR</td></tr>  
+	   <tr><td><input type="radio" name="1">TECHICAL</td></tr>  
+	   <tr><td><input type="radio" name="1">ACCOUNTS</td></tr>  
+    </tr>
+	
+	<tr><td rowspan="3">Date of Joining</td>
+	   <tr><td><input type="text" name="date" maxlength="2" size="2">/<input type="text" name="month" maxlength="2" size="2">/<input type="text" name="year" maxlength="4" size="4"></td></tr>
+       <tr><td>dd &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mm &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yyyy</td></tr>
+	</tr>
+	
+    <tr><td rowspan="1">Address</td>
+        <td><textarea  name="address" rows="3" cols="50"></textarea>	
+    </tr>
+	
+	<tr><td rowspan="5">Programmes attendend</td>
+	    <tr><td><input type="checkbox" name="html">html</td></tr>
+		<tr><td><input type="checkbox" name="html">html</td></tr>
+		<tr><td><input type="checkbox" name="html">html</td></tr>
+		<tr><td><input type="checkbox" name="html">html</td></tr>
+	</tr>	
+	
+	
+	<tr><td>Training programmes need to attend</td>
+	    <td><select multiple size="2">
+		        <option value="javascript" selected>JAVASCRIPT</Option>
+				<option value="jstruts">JSTRUTS</Option>
+				<option value="..net">.NET</Option>
+				<option value="client/server">CLIENT/SERVER</Option>
+				<option value="html">HTML</Option>
+				</select></td>
+	</tr>
+	
+    <tr><td>Send the information at</td>
+        <td><a href="www.empinfo@patni.com">empinfo@patni.com</a></td>
+	</tr>
+</table>		
+</form>
+<br>
+
+<br>
+Q 6.4
+<fieldset>
+<form>
+    <table border="0">
+       <tr>
+           <th colspan="2">Internet Usage Survey</th>
+		</tr>
+
+        <tr><td colspan="2">The Survey is being conducted to help the Internet Usage Patterns of our customers.
+		      Please Take a few moments to complete and submit that short form. Thank you for your cooperation.</td>
+		</tr>	
+
+        <tr><td rowspan="1">What type of Internet Connection do you have ?
+		        (Select one)
+			</td>
+			<td><select multiple size="2">
+			    <option name="high speed">High Speed</option>
+			    <option name="dialup connection">Dial-up Connection</option>
+				<option name="isdn">ISDN</option>
+				<option name="dsl">DSL</option>
+				<option name="cable tv internet">Cable TV Internet Connection</option>
+				</select>
+		    </td>
+		</tr>
+       
+        <tr><td>What Type of Computer do you use most at home?</td>
+		    <td><input type="radio" name="1">Desktop</td>
+			<td><input type="radio" name="1">Laptop</td>
+		</tr>
+		
+		<tr><td rowspan="5">How would you describe your main reason for using the Internet></td>
+		    <tr><td><input type="checkbox" name="1">To do work-related activities</td></tr>
+			<tr><td><input type="checkbox" name="1">To do school-related activities</td></tr>
+			<tr><td><input type="checkbox" name="1">for entertainment purpose</td></tr>
+			<tr><td><input type="checkbox" name="1">Other</td></tr>
+		</tr>
+		
+		<tr rowspan="20">
+		        <td>
+				   <fieldset>
+				       <legend>Types of sites visited</legend>
+				       What type of web sites do you access most often?<br>
+					   check all that apply<br><br>
+                       <input type="checkbox" name="1">Self Improvement<br>
+                       <input type="checkbox" name="2">Entertainment<br>
+                       <input type="checkbox" name="3">News & Sports<br>
+                       <input type="checkbox" name="4">Referance<br>
+                       <input type="checkbox" name="5">Email<br>
+                   </fieldset>					
+			    </td>
+				
+			     <td>
+				   <fieldset>
+				       <legend>time spent using internet</legend>
+					    During an Average week how long do you spend online?
+					    <input type="checkbox" name="1">0-3 Hours<br>
+					    <input type="checkbox" name="1">4-6 Hours<br>
+					    <input type="checkbox" name="1">7-10 Hours<br>
+					    <input type="checkbox" name="1">11-14 Hours<br>
+					    <input type="checkbox" name="1">15+ Hours<br>
+			        </fieldset>
+				</td>
+		
+        </tr>	
+
+        <tr><td colspan="2">Please comment on your concerning Internet privacy and Safety
+               <textarea name="comment" rows="3" cols="50"></textarea>
+			</td>
+		</tr>
+		
+		<tr><td>first name
+		        <input type="text" name="firstname">
+			</td>
+            <td>Last Name 
+                <input type="text" name="firstname">			
+		    </td>
+		</tr>
+
+        <tr><td>Age
+		        <input type="text" name="Age">
+			</td>
+            <td>Zip Code
+                <input type="number" name="zipcode">			
+		    </td>
+		</tr>		
+		
+		<tr><td  colspan="2">
+		        <input type="submit" name="submit" value="Click to Submit">
+				<input type="reset" name="submit" value="Clear Form">
+            </td>
+        </tr>
+    </table>
+ </form>	
+
+<br>
+Q 
+
+</body>
+</html>

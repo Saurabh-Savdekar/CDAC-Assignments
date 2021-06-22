@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("#btn").click(function(){
+             alert($("."+$("div").attr("class")).attr("id"))
+        });  
+  });
+
+    </script>
+    </head>
+    <body>
+       <div id="div1" class="divclass">div-1</div>
+       <div id="div2">div-2</div>
+       <div id="div3">div-3</div>
+        <input type="button" id="btn" value="Click to view which div has class"/>
+
+    </body>
+</html>

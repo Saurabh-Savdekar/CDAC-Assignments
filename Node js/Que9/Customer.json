@@ -1,0 +1,26 @@
+[
+    {
+        "EmpName":"Stark",
+        "Adress": "NewYork",
+        "Ph_no": 25000,
+        "Credit_Rating":"A"
+        
+    },
+    {
+        "EmpName":"Steve",
+        "Adress": "NewYork",
+        "Ph_no": 20000,
+        "Credit_Rating":"A"
+    },
+    {
+        "EmpName":"Bruise",
+        "Adress": "NewYork",
+        "Ph_no": 22000,
+        "Credit_Rating":"A"
+    },
+    {
+        "EmpName":"Natasha",
+        "Adress": "NewYork",
+        "Ph_no": 15000,
+        "Credit_Rating":"A"
+    }]

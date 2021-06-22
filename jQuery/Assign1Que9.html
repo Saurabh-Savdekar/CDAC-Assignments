@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="./jquery-3.6.0.js"></script>
+    <script>
+      $(document).ready(function(){
+          $("#btn").click(function(){
+          $("ul li:nth-child(2)").prepend("<span>Second list item is </span>")
+          });
+  });
+
+    </script>
+    </head>
+    <body>
+        <ul>
+            <li>Apple</li>
+            <li>Kiwi</li>
+            <li>Strawbery</li>
+        </ul>
+        <input type="button" id="btn" value="Change"/>
+
+    </body>
+</html>

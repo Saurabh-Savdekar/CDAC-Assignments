@@ -1,0 +1,58 @@
+<html>
+<head>
+     
+    
+    <script>
+	      function display(){
+		           var a = document.getElementById("name1").value;
+			       var b = document.getElementById("name2").value;
+			       var c = document.getElementById("name3").value;
+			       var d = document.getElementById("name4").value;
+			       var e = document.getElementById("name5").value;
+						
+				var f = a.toUpperCase();
+				var g = b.toUpperCase();
+				var h = c.toUpperCase();
+				var i = d.toUpperCase();
+				var j = e.toUpperCase();
+				
+				var arr = [f,g,h,i,j]
+				
+			 document.getElementById("outputSum").innerHTML = "<fieldset><strong>The Members of my group</strong><br> " +arr+ "<br/></fieldset>" 
+		  
+		       
+		  }
+	
+	
+	</script>
+</head>
+
+
+<body>
+          <form>
+                    <div>
+                      
+                        <P style="color:blue;">
+						   <strong>Enter a Member Name:</strong>
+						     <input type="text" id="name1" name="name1"  placeholder="Enter the start number" ></P>
+							 
+							 <strong>Enter a Member Name:</strong>
+						     <input type="text" id="name2" name="name2"  placeholder="Enter the start number" ></P>
+							 
+							 <strong>Enter a Member Name:</strong>
+						     <input type="text" id="name3" name="name3"  placeholder="Enter the start number" ></P>
+							 
+							 <strong>Enter a Member Name:</strong>
+						     <input type="text" id="name4" name="name4"  placeholder="Enter the start number" ></P>
+							 
+							 <strong>Enter a Member Name:</strong>
+						     <input type="text" id="name5" name="name5"  placeholder="Enter the start number" ></P>
+						
+						
+                       
+					   <input type="button" value="result" id="" onclick="display();"/></P>
+			     </div>
+     
+           </form>
+		   
+		            <p id="outputSum"> </p>

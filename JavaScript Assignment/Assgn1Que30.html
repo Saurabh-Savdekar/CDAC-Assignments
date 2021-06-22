@@ -1,0 +1,71 @@
+  <html>
+  <head>
+  <script>
+                   function OrderDetails() {
+                           
+                            Id = document.getElementById("id").value;
+                            Name = document.getElementById("name").value;
+                            BillingDate = document.getElementById("date").value;
+                            ShippingDate = document.getElementById("date1").value;  
+                            Total = document.getElementById("order").value;							
+                           
+						   if (Name==null || Name==""){  
+                             alert("Name can't be blank");  
+                             return false;  
+                            }else if(Name.length<6){  
+                              alert("Customer Name can not be less then 6 characters long.");  
+                              return false;  
+                            }  
+						   
+						    var todayDate = new Date(BillingDate)
+                            var anyDate = new Date(ShippingDate);
+                              if (todayDate > anyDate) {
+                                alert("Billing Date can not be greater than other Shipping Date.");
+                              }  else {
+                                
+								myWindow = window.open("," , "width=50 , height=50");
+						   
+						          myWindow.document.write("The Order Id is : " + Id + "<br>");
+						          myWindow.document.write("Customer Name : " + Name + "<br>");
+						          myWindow.document.write( "Billing Date : " + BillingDate + "<br>");
+						          myWindow.document.write("Shipping Date :" + ShippingDate + "<br>");
+						          myWindow.document.write("Order Total : " + Total + "<br>");
+                            }
+					}		
+						
+  </script>
+</head>
+
+
+<body>
+          <form name="myForm">
+                    <div>
+                      
+                        <P>
+						   <strong>Order Id</strong>
+						     <input type="number" id="id" name="id" required  ></P>
+							 
+							 <strong>Customer Name:</strong>
+						     <input type="text" id="name" name="name"  required></P>
+							 
+							 <strong>Enter Billing Date:</strong>
+						     <input type="date" id="date" name="date" required></P>
+							 
+							 <strong>Enter Shipping Date:</strong>
+						     <input type="Date" id="date1" name="date1" required></P>
+							 
+							 <strong>Order Total:</strong>
+						     <input type="number" id="order" name="order" required></P>
+						
+						
+                       
+					   <input type="button" value="Display" id="" onclick="OrderDetails();"/></P>
+			     </div>
+     
+           </form>
+		   
+		   
+		
+		 
+	</body>
+</html>	

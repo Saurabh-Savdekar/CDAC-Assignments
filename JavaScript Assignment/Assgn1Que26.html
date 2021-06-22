@@ -1,0 +1,45 @@
+<html>
+<head>
+    <script>
+	      function SumOfDigits(num1){
+		        number1 = parseInt(document.getElementById("num1").value);
+				
+				if(number1 < 0){
+				  document.getElementById("output1").innerHTML ="Entered number is out of range";
+				} else if(number1 > 1000){
+				  document.getElementById("output2").innerHTML ="Entered number is out of range";
+				} 
+				var c = 0;
+				var sum = 0;
+				if(number1 > 0 && number1 < 1000){
+				     while(number1 > 0){
+                     c = number1 % 10;
+	                 sum+=c;
+	                  var number1 = parseInt(number1/10);
+  }                 }
+				   document.getElementById("outputSum").innerHTML = +sum + "<br/>" 
+				}
+		    
+	
+	
+	</script>
+</head>
+   
+    <body>
+          <form>
+                    <div>
+                      
+                        <P style="color:blue;">
+						   <strong>Enter a positive number less than 1000 :</strong>
+						     <input type="text" id="num1" name="num1"  placeholder="Enter the start number" ></P>
+						
+						
+                       
+					   <input type="button" value="result" id="" onclick="SumOfDigits(num1);"/></P>
+			     </div>
+     
+           </form>
+		   
+         <p id="outputSum"> </p>
+		 <p id="output1"> </p>
+		 <p id="output2"> </p>
